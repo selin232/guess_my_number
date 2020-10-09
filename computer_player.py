@@ -10,7 +10,6 @@ prepared by guess_my_number.GuessMachine.
 It's strategy is to try random numbers.'
 """
 
-import random
 
 from guess_my_number import MIN, MAX, GuessMachine
 
@@ -20,7 +19,7 @@ if __name__ == '__main__':
     
     guess_machine = GuessMachine()
     while True:
-        attempt = random.randint(min,max)
+        attempt = int((min + max)/2)
         result = guess_machine.guess(attempt)
         print('tried %d : %s' % (attempt, result))
         if result == 'found':
